@@ -1058,7 +1058,8 @@ Error Layer::setColorTransform(const android::mat4& matrix) {
 #if 1 // TODO, FIXME: for the issue of sharedlibrary linking from gecko
 extern "C" MOZ_EXPORT __attribute__ ((weak))
 HWC2::Display* hwc2_getDisplayById(HWC2::Device *p, hwc2_display_t id) {
-    return p->getDisplayById(id);
+    ALOGI("##################################HW2_libcarthage get a response: display %" PRIu64, id);
+    return p->getDisplayById(1);
 }
 
 extern "C" MOZ_EXPORT __attribute__ ((weak))
